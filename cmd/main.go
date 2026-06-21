@@ -27,6 +27,10 @@ func main() {
 		renderTemplate(w, "index")
 	})
 
+	mux.HandleFunc("GET /about", func(w http.ResponseWriter, r *http.Request) {
+		renderTemplate(w, "about")
+	})
+
 	fs := http.FileServer(http.Dir("./static"))
 	mux.Handle("GET /static/", http.StripPrefix("/static", fs))
 

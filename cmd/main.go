@@ -28,7 +28,7 @@ func main() {
 	})
 
 	fs := http.FileServer(http.Dir("./static"))
-	http.Handle("/static/", http.StripPrefix("/static", fs))
+	mux.Handle("GET /static/", http.StripPrefix("/static", fs))
 
 	fmt.Println("Server listening on :4040")
 	http.ListenAndServe(":4040", mux)

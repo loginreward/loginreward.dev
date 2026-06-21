@@ -27,7 +27,7 @@ func main() {
 		renderTemplate(w, "index")
 	})
 
-	fs := http.FileServer(http.Dir("./imports"))
+	fs := http.FileServer(http.Dir("./static"))
 	http.Handle("/static/", http.StripPrefix("/static", fs))
 
 	fmt.Println("Server listening on :4040")

@@ -1,0 +1,17 @@
+* {
+    color: #fafff9;
+}
+
+body {
+    background-color: black;
+    font-family: Verdana, sans-serif;
+}
+
+h1 {
+    color: #57e389;
+}
+
+#loginreward {
+    width: 200px;
+    height: auto;
+}

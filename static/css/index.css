@@ -1,21 +1,25 @@
-* {
-    color: #fafff9;
-}
-
-body {
-    background-color: black;
-    font-family: Verdana, sans-serif;
-}
-
-h1 {
-    color: #57e389;
-}
-
 #loginreward {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 #main-content {
-    text-align: center;
+  text-align: center;
+}
+
+.service {
+  background-color: #2a2e2b;
+  outline: none;
+  border: 2px solid #57e389;
+  border-radius: 12px;
+  font-size: 20px;
+  padding: 8px;
+  margin: 12px;
+}
+
+#email {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
 }

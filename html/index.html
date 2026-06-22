@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>loginreward.dev</title>
+    <title>loginreward</title>
+    <!-- I need to change this icon... -->
+    <!-- should probably also make it an svg -->
+    <!-- the current one ain't even a square lmfao -->
+    <link rel="icon" type="image/x-icon" href="/static/pfp.jpg" />
+    <link rel="stylesheet" href="/static/css/style.css" />
     <link rel="stylesheet" href="/static/css/index.css" />
   </head>
   <body>
@@ -14,9 +19,30 @@
         <br />
         I have a few services that you could check out if you'd like!
       </p>
-      <a href="https://chat.loginreward.dev">
-        <button>Private fluxer instance</button>
-      </a>
+      <button
+        id="fluxer"
+        class="service"
+        onclick="window.open('https://chat.loginreward.dev', '_blank')"
+      >
+        Private fluxer instance
+      </button>
+      <button
+        id="about"
+        class="service"
+        onclick="window.open('/about', '_blank')"
+      >
+        More about me!
+      </button>
+    </div>
+    <div id="email">
+      <p>
+        Any problems? Send me an
+        <a href="mailto:loginreward@loginreward.dev">email</a>
+        or make a
+        <a href="https://github.com/loginreward/loginreward.dev/issues/new"
+          >github issue</a
+        >
+      </p>
     </div>
   </body>
 </html>

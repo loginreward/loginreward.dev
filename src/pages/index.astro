@@ -1,11 +1,57 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Navbar from '../layouts/Navbar.astro';
+import '../styles/global.css';
 ---
 
 <Layout>
-	<Welcome />
+    <Navbar></Navbar>
+        <div class="container">
+            <h1 class="name">loginreward</h1>
+            <p class="about">
+            Hi there!<br>
+            My name is loginreward.<br>
+            <br>
+            I'm a hobbyist mainly backend dev. I'm also trying to<br>
+            get into engineering.
+            </p>
+            <button id="unmute">Unmute Music</button>
+        </div>
+        <audio id="bg-music" src="/music/song1.wav" autoplay loop muted></audio>
 </Layout>
+
+<script>
+    const audio = document.getElementById("bg-music") as HTMLAudioElement;
+    const button = document.getElementById("unmute") as HTMLButtonElement;
+
+    button?.addEventListener("click", () => {
+        if (audio.muted) {
+            audio.muted = false;
+            button.textContent = "Mute Music";
+        } else {
+            audio.muted = true;
+            button.textContent = "Unmute Music";
+        }
+    })
+</script>
+
+<style>
+    .container {
+        position: relative;
+        top: 80;
+        text-align: center;
+    }
+
+    .name {
+        font-size: 80px;
+    }
+
+    #unmute {
+        border: solid 2px #cba6f7;
+        border-radius: 12px;
+        width: 100px;
+        height: 40px;
+        background-color: #45475a;
+        color: #cdd6f4
+    }
+</style>

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+
+* {
+    font-family: "Jersey 25";
+}
+
+h1 {
+    color: #cba6f7;
+}
+
+p {
+    color: #cdd6f4;
+    font-size: 24px;
+}
+
+body {
+    background-color: #1e1e2e;
+}

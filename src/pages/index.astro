@@ -7,15 +7,15 @@ import '../styles/global.css';
 <Layout>
     <Navbar></Navbar>
         <div class="container">
-            <h1 class="name">loginreward</h1>
-            <p class="about">
+            <h1 class="name animate">loginreward</h1>
+            <p class="about animate">
             Hi there!<br>
             My name is loginreward. (she/her)<br>
             <br>
             I'm a hobbyist mainly backend dev. I'm also trying to<br>
             get into engineering.
             </p>
-            <button id="unmute">Unmute Music</button>
+            <button id="unmute" class="animate">Unmute Music</button>
         </div>
         <audio id="bg-music" src="/music/song1.wav" autoplay loop muted></audio>
 </Layout>
@@ -40,6 +40,7 @@ import '../styles/global.css';
         position: relative;
         top: 80;
         text-align: center;
+        /* animation: slideInDown 0.6s ease-in-out; */
     }
 
     .name {
@@ -52,6 +53,6 @@ import '../styles/global.css';
         width: 100px;
         height: 40px;
         background-color: #45475a;
-        color: #cdd6f4
+        color: #cdd6f4;
     }
 </style>

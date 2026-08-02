@@ -1,5 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
 
+/* thanks to markhorn-dev for this animation */
+.animate {
+  opacity: 0;
+  transform: translateY(12px);
+  transition-property: all;
+  transition-duration: 700ms;
+  transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  filter: blur(20px);
+}
+
+.animate.show {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0px);
+}
+
+
+@keyframes slideInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+    filter: blur(20px);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
+
+
 * {
     font-family: "Jersey 25";
 }

@@ -1,15 +1,45 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>loginreward</title>
-	</head>
-	<body>
-		<slot />
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>loginreward</title>
+    </head>
+    <body>
+        <slot />
+<script is:inline>
+    	function initAnimations() {
+		const observer = new IntersectionObserver((entries) => {
+			let delayCounter = 0;
+
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const element = entry.target;
+
+					if (!element.classList.contains('show')) {
+						element.style.transitionDelay = `${delayCounter * 150}ms`; 
+						element.classList.add('show');
+						
+						delayCounter++;
+					}
+					
+					observer.unobserve(element);
+				}
+			});
+		}, {
+			threshold: 0.05
+		});
+
+		const hiddenElements = document.querySelectorAll('.animate');
+		hiddenElements.forEach((el) => observer.observe(el));
+	}
+
+	initAnimations();
+	document.addEventListener('astro:page-load', initAnimations);
+</script>
 	</body>
 </html>
 
